@@ -2,8 +2,6 @@ const parser = require('../lib');
 const chai = require('chai');
 const fs = require('fs');
 const path = require('path');
-const { offset } = require('../lib/utils'); 
-
 const expect = chai.expect;
 
 describe('asyncapiSchemaFormatParser', function() {
@@ -22,10 +20,10 @@ describe('asyncapiSchemaFormatParser', function() {
             jsonPointer: '/channels/mychannel/publish/message/payload/additionalProperties',
             startLine: 13,
             startColumn: 38,
-            startOffset: offset(252, 13),
+            startOffset: 252,
             endLine: 15,
             endColumn: 15,
-            endOffset: offset(297, 15)
+            endOffset: 297
           }
         },
         {
@@ -34,10 +32,10 @@ describe('asyncapiSchemaFormatParser', function() {
             jsonPointer: '/channels/mychannel/publish/message/payload/additionalProperties',
             startLine: 13,
             startColumn: 38,
-            startOffset: offset(252, 13),
+            startOffset: 252,
             endLine: 15,
             endColumn: 15,
-            endOffset: offset(297, 15)
+            endOffset: 297
           }
         },
         {
@@ -46,10 +44,10 @@ describe('asyncapiSchemaFormatParser', function() {
             jsonPointer: '/channels/mychannel/publish/message/payload/additionalProperties',
             startLine: 13,
             startColumn: 38,
-            startOffset: offset(252, 13),
+            startOffset: 252,
             endLine: 15,
             endColumn: 15,
-            endOffset: offset(297, 15)
+            endOffset: 297
           }
         },
         {
@@ -58,10 +56,10 @@ describe('asyncapiSchemaFormatParser', function() {
             jsonPointer: '/channels/mychannel/publish/message/payload/additionalProperties',
             startLine: 13,
             startColumn: 38,
-            startOffset: offset(252, 13),
+            startOffset: 252,
             endLine: 15,
             endColumn: 15,
-            endOffset: offset(297, 15)
+            endOffset: 297
           }
         },
         {
@@ -70,15 +68,16 @@ describe('asyncapiSchemaFormatParser', function() {
             jsonPointer: '/channels/mychannel/publish/message/payload/additionalProperties',
             startLine: 13,
             startColumn: 38,
-            startOffset: offset(252, 13),
+            startOffset: 252,
             endLine: 15,
             endColumn: 15,
-            endOffset: offset(297, 15)
+            endOffset: 297
           }
         }
       ]);
     }
   });
+
   it('should not throw error if payload not provided', async function() {
     const inputString = `{
       "asyncapi": "2.0.0",
